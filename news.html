@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости - Молочный край</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-left">
+                    <a href="about.html" class="nav-link">О компании</a>
+                    <a href="catalog.html" class="nav-link">Каталог продукции</a>
+                </div>
+                <div class="nav-center">
+                    <a href="index.html" class="logo">
+                        <div class="logo-placeholder">
+                            <img src="images/logo.png" alt="Молочный край" class="logo-image">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-right">
+                    <a href="news.html" class="nav-link active">Новости</a>
+                    <a href="contacts.html" class="nav-link">Контакты</a>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="mobile-menu">
+                <a href="about.html" class="mobile-nav-link">О компании</a>
+                <a href="catalog.html" class="mobile-nav-link">Каталог продукции</a>
+                <a href="news.html" class="mobile-nav-link">Новости</a>
+                <a href="contacts.html" class="mobile-nav-link">Контакты</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Новости компании</h1>
+            <p class="page-subtitle">
+                Следите за последними событиями, новинками и достижениями комбината "Молочный край"
+            </p>
+        </div>
+    </section>
+
+    <!-- Latest News -->
+    <section class="latest-news-section">
+        <div class="container">
+            <h2 class="section-title">Последние новости</h2>
+            <div class="news-grid" id="newsGrid">
+                <article class="news-card" data-id="1">
+                    <div class="news-image">
+                        <img src="images/news/1june-den-detei.jpg" alt="День защиты детей">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">1 июня 2025</div>
+                        <h3 class="news-title">С днем защиты детей!</h3>
+                        <button class="news-btn">Подробнее</button>
+                    </div>
+                </article>
+
+                <article class="news-card" data-id="2">
+                    <div class="news-image">
+                        <img src="images/news/9may.jpg" alt="День Победы">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">9 мая 2025</div>
+                        <h3 class="news-title">С днем Победы!</h3>
+                        <button class="news-btn">Подробнее</button>
+                    </div>
+                </article>
+
+                <article class="news-card" data-id="3">
+                    <div class="news-image">
+                        <img src="images/news/novinki-antoha.jpg" alt="Творог «Антоха Кроха»">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">17 апреля 2025</div>
+                        <h3 class="news-title">НОВИНКА - Творог «Антоха Кроха» с кальцием и витамином D3</h3>
+                        <button class="news-btn">Подробнее</button>
+                    </div>
+                </article>
+
+                <article class="news-card" data-id="4">
+                    <div class="news-image">
+                        <img src="images/news/novinka-tvorog.jpg" alt="Творог 9%">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">2 апреля 2025</div>
+                        <h3 class="news-title">НОВИНКА - Творог 9%</h3>
+                        <button class="news-btn">Подробнее</button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-section">
+                <button class="load-more-btn" id="loadMoreBtn">
+                    Загрузить еще новости
+                    <div class="loading-spinner hidden">
+                        <div class="spinner"></div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-card">
+                <div class="newsletter-content">
+                    <div class="newsletter-icon">📧</div>
+                    <h3>Подпишитесь на новости</h3>
+                    <p>Получайте уведомления о новых продуктах, акциях и событиях компании</p>
+                </div>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="newsletter-input-group">
+                        <div class="newsletter-email-section">
+                            <input type="email" placeholder="Ваш email адрес" class="newsletter-input" required>
+                            <div class="newsletter-agreement">
+                                <label class="newsletter-checkbox-label">
+                                    <input type="checkbox" required>
+                                    <span class="newsletter-checkmark"></span>
+                                    <span class="newsletter-text">Согласен на обработку персональных данных</span>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="newsletter-btn">
+                            Подписаться
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Modal -->
+    <div class="news-modal" id="newsModal">
+        <div class="news-modal-overlay" id="newsModalOverlay"></div>
+        <div class="news-modal-content">
+            <button class="news-modal-close" id="newsModalClose">&times;</button>
+            <div class="news-modal-body">
+                <div class="news-modal-image">
+                    <img src="" alt="" id="modalNewsImage">
+                </div>
+                <div class="news-modal-text">
+                    <div class="news-modal-date" id="modalNewsDate"></div>
+                    <h2 class="news-modal-title" id="modalNewsTitle"></h2>
+                    <div class="news-modal-content-text" id="modalNewsContent"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-placeholder small">
+                            <img src="images/logo-small.png" alt="Молочный край" class="logo-image small">
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Комбинат детского питания "Молочный край" - более 20 лет заботы о здоровье каждой семьи
+                    </p>
+                    <div class="footer-year">© 2025 Молочный край</div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <ul>
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="about.html">О компании</a></li>
+                            <li><a href="catalog.html">Каталог продукции</a></li>
+                            <li><a href="news.html">Новости</a></li>
+                            <li><a href="contacts.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-contacts">
+                    <h4>Контакты</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <strong>Адрес</strong>
+                                <p>г. Хабаровск, ул. Индустриальная, 19А</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <div>
+                                <strong>Телефон</strong>
+                                <p>+7 (4212) 54-32-94</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <div>
+                                <strong>Email</strong>
+                                <p>oootdmk@mail.ru</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
